@@ -15,6 +15,7 @@ export const errorHandler: ErrorRequestHandler = (
   // CustomError class. If it is, then we can send the error in the
   // common error response structure.
 
+  console.error(err);
   res.status(400).send({
     errors: [{ message: "Something went wrong" }],
   });
